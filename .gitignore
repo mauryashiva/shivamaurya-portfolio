@@ -1,8 +1,8 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
+# -----------------------------
+# Dependencies
+# -----------------------------
+node_modules/
+.pnp/
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -10,32 +10,68 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
+# -----------------------------
+# Next.js build output
+# -----------------------------
+.next/
+out/
+build/
 
-# next.js
-/.next/
-/out/
+# -----------------------------
+# Production / cache
+# -----------------------------
+dist/
+.cache/
+.tmp/
+.temp/
 
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# -----------------------------
+# Logs
+# -----------------------------
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
+*.log
 
-# env files (can opt-in for committing if needed)
-.env*
+# -----------------------------
+# Environment variables (SECRET)
+# -----------------------------
+.env
+.env.*
+!.env.example
 
-# vercel
+# -----------------------------
+# Vercel
+# -----------------------------
 .vercel
 
-# typescript
+# -----------------------------
+# OS / Editor junk
+# -----------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.pem
+
+# -----------------------------
+# TypeScript
+# -----------------------------
 *.tsbuildinfo
 next-env.d.ts
+
+# -----------------------------
+# Testing
+# -----------------------------
+coverage/
+.playwright/
+test-results/
+
+# -----------------------------
+# Misc
+# -----------------------------
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
