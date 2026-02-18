@@ -118,7 +118,7 @@ const projects: Project[] = [
       "Enterprise SCM platform with Supabase Auth, AI demand forecasting, and real-time WebSocket sync for inventory management.",
     github: "https://github.com/MauryaShiva",
     images: [
-      "/projects/supplychain1.png",
+      "/projects/supplychain-1.png",
       "/projects/supplychain-2.png",
       "/projects/supplychain-3.png",
     ],
