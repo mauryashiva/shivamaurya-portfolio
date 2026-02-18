@@ -6,47 +6,50 @@ import { Github, Mail, FileText } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="max-w-6xl mx-auto px-4 pt-20 pb-16">
-      <div className="space-y-6">
-        {/* Animated Title */}
+    <section
+      id="hero"
+      className="max-w-7xl mx-auto px-6 pt-8 pb-14 md:pt-10 md:pb-20"
+    >
+      <div className="max-w-3xl space-y-6">
+        {/* Title */}
         <motion.h1
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           className="text-4xl md:text-6xl font-bold leading-tight"
         >
           Hi, I'm <span className="text-primary">Shiva Maurya</span>
         </motion.h1>
 
-        {/* Animated Role */}
+        {/* Role */}
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.5 }}
-          className="text-xl md:text-2xl text-muted-foreground"
+          transition={{ delay: 0.1, duration: 0.4 }}
+          className="text-lg md:text-2xl text-muted-foreground"
         >
           Full-Stack Developer • AI / Machine Learning Engineer
         </motion.h2>
 
-        {/* Animated Description */}
+        {/* Description */}
         <motion.p
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          className="max-w-2xl text-muted-foreground"
+          transition={{ delay: 0.2, duration: 0.4 }}
+          className="text-muted-foreground"
         >
-          Building scalable full-stack and AI-powered systems with modern
-          technologies like Next.js, FastAPI, Machine Learning, and Real-Time
-          Architecture. Focused on performance, clean design, and real-world
-          problem solving.
+          Building scalable full-stack and AI-powered systems using modern
+          technologies like Next.js, FastAPI, Machine Learning, and real-time
+          architectures. Focused on performance, clean design, and solving
+          real-world problems.
         </motion.p>
 
         {/* Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
-          className="flex flex-wrap gap-3"
+          transition={{ delay: 0.3, duration: 0.4 }}
+          className="flex flex-wrap gap-3 pt-2"
         >
           <Button
             className="gap-2"

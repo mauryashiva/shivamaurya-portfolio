@@ -5,25 +5,25 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-/* ---------- Fixed Animation Config ---------- */
+/* ---------- Optimized "Super Fast" Animation Config ---------- */
 
 const fastSnap = {
-  type: "spring" as const, // Added 'as const' to fix the error
-  stiffness: 600,
-  damping: 30,
-  mass: 0.8,
+  type: "spring" as const,
+  stiffness: 800, // Increased for snappier movement
+  damping: 35, // Higher damping to prevent excessive oscillation at high speeds
+  mass: 0.5, // Lower mass makes it feel "lighter" and faster
 };
 
 const popInVariants = {
   hidden: (index: number) => ({
     opacity: 0,
-    x: index % 2 === 0 ? -100 : 100,
-    scale: 0.5,
-    filter: "blur(10px)",
+    y: 30, // Changed to Y for a tighter "pop-up" feel
+    scale: 0.9,
+    filter: "blur(8px)",
   }),
   show: {
     opacity: 1,
-    x: 0,
+    y: 0,
     scale: 1,
     filter: "blur(0px)",
     transition: fastSnap,
@@ -73,7 +73,7 @@ const contactMethods: ContactMethod[] = [
   },
   {
     label: "GitHub",
-    value: "MauryaShiva",
+    value: "github.com/MauryaShiva",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
         <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
@@ -86,7 +86,7 @@ const contactMethods: ContactMethod[] = [
   },
   {
     label: "LinkedIn",
-    value: "Shiva Maurya",
+    value: "linkedin.com/in/shiva-maurya-14b14231b",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -103,30 +103,27 @@ const contactMethods: ContactMethod[] = [
 
 export function Contact() {
   return (
-    <section
-      id="contact"
-      className="relative max-w-7xl mx-auto px-6 py-24 overflow-visible"
-    >
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-125 bg-primary/10 blur-[150px] -z-10 rounded-full" />
+    <section id="contact" className="max-w-7xl mx-auto px-6 pt-0 pb-12">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-125 bg-primary/5 blur-[120px] -z-10 rounded-full" />
 
-      <div className="mb-10">
+      <div className="mb-12">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: false, amount: 0.3 }} // Triggers every time you scroll back
           transition={fastSnap}
           className="text-4xl md:text-5xl font-bold tracking-tight"
         >
           Get in <span className="text-primary">Touch</span>
         </motion.h2>
 
-        <p className="mt-3 text-muted-foreground max-w-lg">
+        <p className="mt-4 text-muted-foreground max-w-lg text-lg">
           Feel free to reach out for collaboration, opportunities, or any
           professional inquiries.
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 w-full">
         {contactMethods.map((method, index) => (
           <motion.div
             key={method.label}
@@ -134,43 +131,43 @@ export function Contact() {
             variants={popInVariants}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.1 }}
+            viewport={{ once: false, amount: 0.05 }} // Triggers instantly when even a tiny bit is visible
             whileHover={{
-              scale: 1.02,
-              y: -5,
-              transition: { duration: 0.1 },
+              scale: 1.03,
+              y: -8,
+              transition: { type: "spring", stiffness: 400, damping: 10 },
             }}
             className={cn(
-              "group relative flex flex-col h-full rounded-3xl border-2 border-muted bg-card p-6 transition-colors duration-200 shadow-2xl",
+              "group relative flex flex-col h-full rounded-3xl border-2 border-muted bg-card p-6 transition-all duration-300 shadow-xl",
               method.color,
             )}
           >
             <motion.div
-              whileHover={{ rotate: 360 }}
-              transition={{ duration: 0.5, type: "spring" }}
+              whileHover={{ rotate: 12, scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 500 }}
               className={cn(
-                "w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center mb-6 shadow-lg",
+                "w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center mb-6 shadow-md transition-colors",
                 method.brandColor,
               )}
             >
               {method.icon}
             </motion.div>
 
-            <div className="mb-8">
-              <span className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground opacity-50">
+            <div className="mb-8 overflow-hidden">
+              <span className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground opacity-60">
                 {method.label}
               </span>
-              <h3 className="text-xl font-bold truncate mt-1">
+              <h3 className="text-lg md:text-xl font-bold mt-1 break-all md:wrap-break-word leading-tight">
                 {method.value}
               </h3>
             </div>
 
             <Button
               onClick={() => window.open(method.href, "_blank")}
-              className="mt-auto w-full h-14 bg-foreground text-background hover:bg-primary hover:text-white rounded-2xl font-black text-lg transition-all active:scale-90"
+              className="mt-auto w-full h-12 bg-foreground text-background hover:bg-primary hover:text-white rounded-xl font-bold text-base transition-all active:scale-90"
             >
-              {method.actionLabel}
-              <ArrowUpRight className="ml-2 w-5 h-5" />
+              <span className="truncate">{method.actionLabel}</span>
+              <ArrowUpRight className="ml-2 w-4 h-4 shrink-0" />
             </Button>
           </motion.div>
         ))}

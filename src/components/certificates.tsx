@@ -115,16 +115,24 @@ const certificates = [
 
 export function Certificates() {
   return (
-    <section id="certificates" className="max-w-7xl mx-auto px-6 py-24">
-      <div className="text-center mb-20">
+    <section id="certificates" className="max-w-7xl mx-auto px-6 pt-0 pb-12">
+      <div className="mb-14">
+        {/* Section Heading */}
         <motion.h2
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
-          className="text-6xl md:text-8xl font-black tracking-tighter italic"
+          transition={fastSnap}
+          className="text-3xl md:text-4xl font-bold tracking-tight"
         >
-          VERIFIED <span className="text-primary not-italic">PROOF</span>
+          Certifications & <span className="text-primary">Achievements</span>
         </motion.h2>
+
+        {/* Subtitle (You can edit this line anytime) */}
+        <p className="mt-3 text-muted-foreground max-w-2xl">
+          Verified credentials demonstrating expertise in software development,
+          cloud computing, cybersecurity, and modern technologies.
+        </p>
       </div>
 
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

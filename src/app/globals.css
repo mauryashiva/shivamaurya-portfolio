@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* =========================
+   THEME COLORS
+========================= */
 @theme {
   --color-background: oklch(1 0 0);
   --color-foreground: oklch(0.145 0 0);
@@ -13,7 +16,9 @@
   --color-border: oklch(0.922 0 0);
 }
 
-/* Dark mode */
+/* =========================
+   DARK MODE
+========================= */
 .dark {
   --color-background: oklch(0.145 0 0);
   --color-foreground: oklch(0.985 0 0);
@@ -27,21 +32,39 @@
   --color-border: oklch(0.269 0 0);
 }
 
+/* =========================
+   FULL HEIGHT LAYOUT FIX
+   (IMPORTANT — Footer Bottom)
+========================= */
 html,
 body {
   height: 100%;
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
   background: var(--color-background);
   color: var(--color-foreground);
 }
 
+/* MAIN pushes footer down */
+main {
+  flex: 1;
+}
+
+/* =========================
+   SMOOTH SCROLL
+========================= */
 html {
   scroll-behavior: smooth;
 }
 
-/* Smooth page appearance */
+/* =========================
+   PAGE FADE ANIMATION
+========================= */
 .fade-in {
   animation: fadeIn 0.6s ease forwards;
 }
@@ -57,15 +80,22 @@ html {
   }
 }
 
+/* =========================
+   PERFORMANCE OPTIMIZATION
+========================= */
 .motion-safe * {
   transform: translateZ(0);
   backface-visibility: hidden;
 }
 
+/* =========================
+   NO SCROLLBAR UTILITY
+========================= */
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;

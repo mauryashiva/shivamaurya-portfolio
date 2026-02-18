@@ -12,15 +12,25 @@ import { Certificates } from "@/components/certificates";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="relative bg-background text-foreground overflow-x-hidden">
       <BackgroundGradient />
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Certificates />
-      <Contact />
+
+      {/* Sections Area */}
+      <div className="flex flex-col">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+
+        {/* We keep the ID here but the internal padding of 
+            Certificates should be adjusted as shown below */}
+        <Certificates />
+
+        <Contact />
+      </div>
+
+      {/* Overlays & Global Components */}
       <FloatingResume />
       <Footer />
       <MobileNav />

@@ -186,11 +186,8 @@ const projects: Project[] = [
 
 export function Projects() {
   return (
-    <section
-      id="projects"
-      className="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-28"
-    >
-      <div className="flex flex-col mb-16">
+    <section id="projects" className="max-w-7xl mx-auto px-6 pt-0 pb-12">
+      <div className="flex flex-col mb-10">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
