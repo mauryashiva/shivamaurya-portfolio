@@ -32,14 +32,36 @@ export function Hero() {
         {/* Text Content */}
         <div className="w-full max-w-3xl space-y-5 text-center md:text-left">
           {/* Title */}
+          {/* Title */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-3xl sm:text-4xl md:text-6xl 
-                       font-bold leading-snug wrap-break-word"
+             font-bold leading-snug relative inline-block"
           >
-            Hi, I'm <span className="text-primary">Shiva Maurya</span>
+            {/* Base Text */}
+            <span className="text-foreground">
+              Hi, I'm <span>Shiva Maurya</span>
+            </span>
+
+            {/* Animated Color Overlay */}
+            <motion.span
+              className="absolute inset-0 bg-linear-to-r 
+               from-indigo-500 via-pink-500 to-cyan-500 
+               bg-clip-text text-transparent"
+              initial={{ width: 0 }}
+              animate={{ width: "100%" }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                repeatDelay: 1.5,
+                ease: "easeInOut",
+              }}
+              style={{ whiteSpace: "nowrap", overflow: "hidden" }}
+            >
+              Hi, I'm <span>Shiva Maurya</span>
+            </motion.span>
           </motion.h1>
 
           {/* Role */}
