@@ -15,7 +15,7 @@ export function Navbar() {
 
           {/* Animated Color Overlay */}
           <motion.span
-            className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 bg-clip-text text-transparent"
+            className="absolute inset-0 bg-linear-to-r from-purple-500 via-pink-500 to-blue-500 bg-clip-text text-transparent"
             initial={{ width: 0 }}
             animate={{ width: "100%" }}
             transition={{
