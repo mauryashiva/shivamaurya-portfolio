@@ -6,7 +6,7 @@ export function About() {
         <h2 className="text-2xl md:text-3xl font-bold mb-6">About Me</h2>
 
         {/* Content */}
-        <p className="text-muted-foreground leading-relaxed">
+        <p className="text-muted-foreground leading-relaxed text-justify md:text-left">
           I am an Information Technology student with a strong foundation in
           Python and a passion for Artificial Intelligence and Full-Stack
           development. I specialize in building intelligent, scalable
@@ -14,7 +14,7 @@ export function About() {
           real-time technologies.
         </p>
 
-        <p className="text-muted-foreground leading-relaxed mt-4">
+        <p className="text-muted-foreground leading-relaxed mt-4 text-justify md:text-left">
           I have developed multiple production-grade projects including an
           AI-powered Supply Chain Management System, a real-time chat
           application using WebRTC, a deep learning media classification engine,
