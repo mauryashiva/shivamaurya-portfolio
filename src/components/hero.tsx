@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Github, Mail, FileText } from "lucide-react";
+import { Typewriter } from "react-simple-typewriter";
 
 export function Hero() {
   return (
@@ -68,11 +69,27 @@ export function Hero() {
           <motion.h2
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.4 }}
-            className="text-base sm:text-lg md:text-2xl 
-                       text-muted-foreground wrap-break-word"
+            transition={{ delay: 0.2, duration: 0.4 }}
+            className="text-lg md:text-2xl text-muted-foreground 
+             min-h-12 md:min-h-12 
+             flex items-center justify-center md:justify-start
+             text-center md:text-left"
           >
-            Full-Stack Developer • AI / Machine Learning Engineer
+            <span className="block leading-tight">
+              <Typewriter
+                words={[
+                  "Full-Stack Engineer (React, Next.js, Node.js/Express)",
+                  "Machine Learning & AI Engineer",
+                  "Backend & Data Engineer (Python/FastAPI, SQL & NoSQL Databases)",
+                ]}
+                loop
+                cursor
+                cursorStyle
+                typeSpeed={60}
+                deleteSpeed={30}
+                delaySpeed={1200}
+              />
+            </span>
           </motion.h2>
 
           {/* Description */}
