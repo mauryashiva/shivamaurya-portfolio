@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shiva Maurya Portfolio Website
 
-## Getting Started
+This is my personal portfolio website showcasing my projects, skills, certifications, and contact information as a Full-Stack Developer and AI Engineer.
 
-First, run the development server:
+The portfolio highlights my work in modern web development, machine learning applications, and real-time systems.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Live Website  
+https://shivamaurya.in
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+• Modern responsive UI for mobile, tablet, and desktop  
+• Smooth animations using Framer Motion  
+• Dark / Light theme support  
+• Projects showcase with live demos and GitHub links  
+• Certifications section with preview and document view  
+• Contact section with WhatsApp, Email, GitHub, LinkedIn, and Twitter  
+• Optimized layout for performance and fast loading
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Frontend  
+Next.js  
+React  
+TypeScript  
+Tailwind CSS  
+Shadcn UI
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Animations  
+Framer Motion
 
-## Deploy on Vercel
+Deployment  
+Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Sections Included
+
+Hero Section  
+Introduction and quick links to contact, GitHub, and resume.
+
+About Section  
+Overview of my background, interests, and development focus.
+
+Skills Section  
+Technical skills across programming, AI/ML, frontend, backend, and databases.
+
+Projects Section  
+Featured projects with descriptions, technologies used, and live demos.
+
+Certificates Section  
+Verified certifications from IBM SkillsBuild, Cisco Networking Academy, IIT Bombay, and others.
+
+Contact Section  
+Direct contact options including WhatsApp, Email, GitHub, LinkedIn, and Twitter.
+
+---
