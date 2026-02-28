@@ -81,8 +81,8 @@ export default function RootLayout({
     url: "https://shivamaurya.in",
     image: "https://shivamaurya.in/profile.jpeg",
     sameAs: [
-      "https://github.com/MauryaShiva",
-      "https://www.linkedin.com/in/shiva-maurya-14b14231b",
+      "https://github.com/mauryashiva",
+      "https://www.linkedin.com/in/mauryashiva/",
       "https://x.com/themauryashiva",
     ],
     jobTitle: "Full Stack Developer",
