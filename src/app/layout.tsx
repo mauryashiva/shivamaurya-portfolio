@@ -3,21 +3,43 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://shivamaurya.in"),
+
   title: {
-    default: "Shiva Maurya | Full Stack & AI Developer",
+    default: "Shiva Maurya | Full Stack Developer & AI Engineer",
     template: "%s | Shiva Maurya",
   },
+
   description:
-    "Portfolio of Shiva Maurya — Full Stack Developer and AI Engineer specializing in Next.js, FastAPI, Machine Learning, and scalable web applications.",
+    "Shiva Maurya is a Full Stack Developer and AI Engineer specializing in Next.js, FastAPI, Machine Learning, and scalable real-time applications.",
+
+  keywords: [
+    "Shiva Maurya",
+    "Full Stack Developer",
+    "AI Engineer",
+    "Next.js Developer",
+    "FastAPI Developer",
+    "Machine Learning Engineer",
+    "React Developer",
+    "Portfolio",
+  ],
+
+  authors: [{ name: "Shiva Maurya" }],
+  creator: "Shiva Maurya",
+
+  /* Google Search Console Verification */
+  verification: {
+    google: "hnBrxWt8yxOYPpmL9phrnafil1PuppbzS5_aJ_y9a3k",
+  },
 
   icons: {
     icon: "/favicon.ico",
   },
 
   openGraph: {
-    title: "Shiva Maurya | Full Stack & AI Developer",
+    title: "Shiva Maurya | Full Stack Developer & AI Engineer",
     description:
-      "Portfolio of Shiva Maurya — Full Stack Developer and AI Engineer building real-world scalable applications.",
+      "Portfolio of Shiva Maurya showcasing AI, Full-Stack and Machine Learning projects.",
     url: "https://shivamaurya.in",
     siteName: "Shiva Maurya Portfolio",
     images: [
@@ -30,6 +52,15 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Shiva Maurya | Full Stack Developer",
+    description:
+      "Portfolio of Shiva Maurya showcasing AI and Full Stack projects.",
+    images: ["/profile.jpeg"],
+    creator: "@themauryashiva",
   },
 
   robots: {
@@ -55,10 +86,6 @@ export default function RootLayout({
       "https://x.com/themauryashiva",
     ],
     jobTitle: "Full Stack Developer",
-    worksFor: {
-      "@type": "Organization",
-      name: "Self",
-    },
   };
 
   return (
@@ -75,7 +102,9 @@ export default function RootLayout({
           {/* Google Structured Data */}
           <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(personSchema),
+            }}
           />
         </ThemeProvider>
       </body>
