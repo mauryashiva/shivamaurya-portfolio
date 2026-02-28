@@ -1,10 +1,14 @@
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import type { Metadata } from "next";
+import Analytics from "./analytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://shivamaurya.in"),
 
+  alternates: {
+    canonical: "https://shivamaurya.in",
+  },
   title: {
     default: "Shiva Maurya | Full Stack Developer & AI Engineer",
     template: "%s | Shiva Maurya",
@@ -80,12 +84,14 @@ export default function RootLayout({
     name: "Shiva Maurya",
     url: "https://shivamaurya.in",
     image: "https://shivamaurya.in/profile.jpeg",
+    jobTitle: "Full Stack Developer & AI Engineer",
+    description:
+      "Full Stack Developer specializing in Next.js, FastAPI, AI and Machine Learning applications.",
     sameAs: [
       "https://github.com/mauryashiva",
-      "https://www.linkedin.com/in/mauryashiva/",
+      "https://www.linkedin.com/in/mauryashiva",
       "https://x.com/themauryashiva",
     ],
-    jobTitle: "Full Stack Developer",
   };
 
   return (
