@@ -8,7 +8,7 @@ export function FloatingResume() {
     <div className="fixed bottom-20 right-4 z-50">
       <Button
         className="shadow-lg gap-2 rounded-full px-4"
-        onClick={() => window.open("/Shiva_Maurya_Resume.pdf", "_blank")}
+        onClick={() => window.open("/Shiva_Maurya_Resume.pdf?v2", "_blank")}
       >
         <FileText size={16} />
         Resume
