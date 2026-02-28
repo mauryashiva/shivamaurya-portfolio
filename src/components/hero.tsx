@@ -39,7 +39,7 @@ export function Hero() {
     },
     {
       icon: <Github size={18} color="#333" />,
-      link: "https://github.com/MauryaShiva",
+      link: "https://github.com/mauryashiva",
       hoverBg: "hover:bg-[#333]/10",
     },
     {
@@ -209,7 +209,7 @@ export function Hero() {
               variant="outline"
               className="gap-2 flex-1 md:flex-none text-xs sm:text-sm"
               onClick={() =>
-                window.open("https://github.com/MauryaShiva", "_blank")
+                window.open("https://github.com/mauryashiva", "_blank")
               }
             >
               <Github size={16} />
@@ -219,7 +219,7 @@ export function Hero() {
             <Button
               variant="outline"
               className="gap-2 flex-1 md:flex-none text-xs sm:text-sm"
-              onClick={() => window.open("/resume.pdf", "_blank")}
+              onClick={() => window.open("/Shiva_Maurya_Resume.pdf", "_blank")}
             >
               <FileText size={16} />
               Resume

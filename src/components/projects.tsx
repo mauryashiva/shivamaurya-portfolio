@@ -116,7 +116,7 @@ const projects: Project[] = [
     title: "Supply Chain AI Dashboard",
     description:
       "Enterprise SCM platform with Supabase Auth, AI demand forecasting, and real-time WebSocket sync for inventory management.",
-    github: "https://github.com/MauryaShiva",
+    github: "https://github.com/mauryashiva",
     images: [
       "/projects/supplychain-1.png",
       "/projects/supplychain-2.png",
@@ -140,7 +140,7 @@ const projects: Project[] = [
     title: "QuickChat - Real-Time App",
     description:
       "MERN stack suite with WebRTC P2P calls, Socket.IO presence, and a context-aware AI assistant.",
-    github: "https://github.com/MauryaShiva/QuickChat",
+    github: "https://github.com/mauryashiva/QuickChat",
     images: [
       "/projects/quickchat-1.png",
       "/projects/quickchat-2.png",
@@ -155,7 +155,7 @@ const projects: Project[] = [
     title: "GenreLab - AI Classification",
     description:
       "PyTorch CNN engine that classifies media genres in real-time with local-first IndexedDB storage.",
-    github: "https://github.com/MauryaShiva/media-genre-classifier",
+    github: "https://github.com/mauryashiva/media-genre-classifier",
     images: ["/projects/genrelab-1.png", "/projects/genrelab-2.png"],
     tags: ["PyTorch", "FastAPI", "Librosa", "CNN"],
   },
@@ -163,7 +163,7 @@ const projects: Project[] = [
     title: "GymX Fitness Website",
     description:
       "Offline-first React app with 1,300+ local exercises and Fuse.js smart search.",
-    github: "https://github.com/MauryaShiva/GymX-Fitness",
+    github: "https://github.com/mauryashiva/GymX-Fitness",
     images: [
       "/projects/gymx-1.png",
       "/projects/gymx-2.png",
@@ -176,7 +176,7 @@ const projects: Project[] = [
     title: "Sentiment Analysis WebApp",
     description:
       "FastAPI tool using RoBERTa Transformers and WebSockets for real-time CSV data analysis.",
-    github: "https://github.com/MauryaShiva/sentiment-analysis-webapp",
+    github: "https://github.com/mauryashiva/sentiment-analysis-webapp",
     images: ["/projects/sentiment-1.png", "/projects/sentiment-2.png"],
     tags: ["Hugging Face", "FastAPI", "WebSockets", "Recharts"],
   },
