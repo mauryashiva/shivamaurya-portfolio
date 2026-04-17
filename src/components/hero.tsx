@@ -81,7 +81,7 @@ export function Hero() {
                 rounded-full overflow-hidden border-4 border-primary shadow-xl z-10"
             >
               <Image
-                src="/profile.jpeg"
+                src="/profile1.jpeg"
                 alt="Shiva Maurya"
                 fill
                 className="object-cover"
