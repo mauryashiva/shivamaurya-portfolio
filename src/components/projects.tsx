@@ -126,7 +126,7 @@ const projects: Project[] = [
     links: [
       {
         label: "Admin",
-        url: "https://supply-chain-ai-dashboard-admi.vercel.app",
+        url: "https://supply-chain-ai-dashboard-admin.vercel.app",
         icon: <LayoutDashboard size={14} />,
       },
       {
