@@ -1,78 +1,95 @@
 @import "tailwindcss";
 
 /* =========================
-   THEME COLORS
-========================= */
+   THEME CONFIGURATION (v4)
+   ========================= */
 @theme {
+  /* --- LIGHT THEME (Default) --- */
+  /* background: Pure White */
   --color-background: oklch(1 0 0);
-  --color-foreground: oklch(0.145 0 0);
+  /* foreground: Slate 800 (Highly Visible) */
+  --color-foreground: oklch(0.279 0.041 260);
 
-  --color-primary: oklch(0.205 0 0);
-  --color-primary-foreground: oklch(0.985 0 0);
+  --color-primary: oklch(0.5 0.2 260);
+  --color-primary-foreground: oklch(0.98 0 0);
 
-  --color-muted: oklch(0.97 0 0);
-  --color-muted-foreground: oklch(0.556 0 0);
+  --color-muted: oklch(0.96 0.01 250);
+  --color-muted-foreground: oklch(0.45 0.02 255);
 
-  --color-border: oklch(0.922 0 0);
+  --color-border: oklch(0.92 0.01 255);
 }
 
 /* =========================
-   DARK MODE
-========================= */
+   DARK MODE OVERRIDES
+   ========================= */
 .dark {
-  --color-background: oklch(0.145 0 0);
-  --color-foreground: oklch(0.985 0 0);
+  /* background: Very Dark Navy/Black */
+  --color-background: oklch(0.13 0.02 255);
+  /* foreground: Slate 200 (Bright Silver) */
+  --color-foreground: oklch(0.91 0.01 255);
 
-  --color-primary: oklch(0.985 0 0);
-  --color-primary-foreground: oklch(0.205 0 0);
+  --color-primary: oklch(0.7 0.15 250);
+  --color-primary-foreground: oklch(0.13 0.02 255);
 
-  --color-muted: oklch(0.269 0 0);
-  --color-muted-foreground: oklch(0.708 0 0);
+  --color-muted: oklch(0.25 0.03 260);
+  --color-muted-foreground: oklch(0.7 0.02 260);
 
-  --color-border: oklch(0.269 0 0);
+  --color-border: oklch(0.25 0.03 260);
 }
 
 /* =========================
-   FULL HEIGHT LAYOUT FIX
-   (IMPORTANT — Footer Bottom)
-========================= */
-html,
-body {
-  height: 100%;
-}
+   BASE STYLES
+   ========================= */
+@layer base {
+  *,
+  ::after,
+  ::before {
+    border-color: var(--color-border);
+  }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  html {
+    scroll-behavior: smooth;
+  }
 
-  background: var(--color-background);
-  color: var(--color-foreground);
-}
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Smooth transition when switching themes */
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border-color 0.3s ease;
+  }
 
-/* MAIN pushes footer down */
-main {
-  flex: 1;
+  main {
+    flex: 1;
+  }
 }
 
 /* =========================
-   SMOOTH SCROLL
-========================= */
-html {
-  scroll-behavior: smooth;
-}
+   UTILITIES & ANIMATIONS
+   ========================= */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 
-/* =========================
-   PAGE FADE ANIMATION
-========================= */
-.fade-in {
-  animation: fadeIn 0.6s ease forwards;
+  .fade-in {
+    animation: fadeIn 0.6s ease forwards;
+  }
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -80,24 +97,8 @@ html {
   }
 }
 
-/* =========================
-   PERFORMANCE OPTIMIZATION
-========================= */
+/* PERFORMANCE OPTIMIZATION */
 .motion-safe * {
   transform: translateZ(0);
   backface-visibility: hidden;
-}
-
-/* =========================
-   NO SCROLLBAR UTILITY
-========================= */
-@layer utilities {
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
 }

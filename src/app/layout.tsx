@@ -96,16 +96,20 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-background text-foreground antialiased">
+      <body className="bg-background text-foreground antialiased min-h-screen flex flex-col">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <main className="flex flex-col min-h-screen flex-1">{children}</main>
+          {/* Main content wrapper */}
+          <main className="flex-1">{children}</main>
 
-          {/* Google Structured Data */}
+          {/* Render Google Analytics */}
+          <Analytics />
+
+          {/* Google Structured Data (JSON-LD) */}
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
